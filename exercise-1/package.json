@@ -1,0 +1,16 @@
+{
+  "name": "exercise-1",
+  "version": "1.0.0",
+  "description": "Exercise 1",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm rum lite",
+    "lite": "lite-server"
+  },
+  "author": "Carlos Cruz",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
