@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; //Importing bootstrap (Reactstrap and react-popper)
+import './index.css'; //CSS must be imported later so they can overrun bootstrap
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
