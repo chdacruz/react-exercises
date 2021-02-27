@@ -1,16 +1,36 @@
 import './App.css';
 import { Navbar, NavbarBrand } from 'reactstrap';
+import Menu from './components/MenuComponent';
+import { DISHES } from './shared/dishes'
+import { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-     <Navbar dark color = "primary">
-       <div className="container">
-         <NavbarBrand href="/">Ristorante Con Fucsion</NavbarBrand>
-       </div>
-     </Navbar>
-    </div>
-  );
+
+class App extends Component {
+
+   constructor(props) {
+      super(props);
+
+      this.state = {
+         dishes: DISHES
+      };
+   }
+
+   render() {
+      return (
+         <div className="App">
+            <Navbar dark color="primary">
+               <div className="container">
+                  <NavbarBrand href="/">Ristorante Con Fucsion</NavbarBrand>
+               </div>
+            </Navbar>
+            <Menu dishes={this.state.dishes} />
+         </div>
+      );
+   }
 }
+
+/*function App() {
+  
+}*/
 
 export default App;
