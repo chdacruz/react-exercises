@@ -9,7 +9,7 @@ const DishDetail = (props) => {
             <RenderDish dish={props.dish[0]} />
          </div>
          <div className="col-12 col-md-5 m-1">
-            <RenderComments comments={props.dish[0].comments}/>
+            <RenderComments dish={props.dish[0]}/>
          </div>
       </div>
       
@@ -36,12 +36,12 @@ function RenderDish({dish}) {
    }
 }
 
-function RenderComments({comments}) {
-   if(comments != null) {
+function RenderComments({dish}) {
+   if(dish != null) {
       return(
          <Card>
             <h4>Comments</h4>
-            {comments.map(cmt => (
+            {dish.comments.map(cmt => (
                <ul key={cmt.id} className="list-unstyled">
                   <li >{cmt.comment}</li>
                   <li >
